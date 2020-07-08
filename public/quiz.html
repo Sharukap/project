@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>Quiz</title>
+<script type="text/javascript">
+var name;
+name=window.prompt("Enter your name");
+document.writeln("<h1>Welcome " +name+ " to the histor quiz!</h1>");
+function quizmarks(){
+var answer1 =document.forms["Quizform"]["q1"].value;
+if(answer!="William1"){
+alert("Answer is wrong"); 
+return false;} 
+else{
+alert("Answer is correct");}
+}
+</script>
+<style type="text/css">
+label{
+display:inline-block;
+text-align:left;
+margin-right:10pt;
+width:600px;
+}
+</style>
+</head>
+<body style=background-color:red;>
+<form name="Quizform" action="target.php" onsubmit="return quizmarks()" method="get">
+<label>The first Norman King of England</label>
+<select name="q1">
+<option value="" selected="selected">---select king</option>
+<option value="Harold-I">Harold Godwinson</option>
+<option value="William-II">William Rufus</option>
+<option value="William1"> William the conqurer</option>
+</select>
+<br/><br/>
+<label>The archbishop of canterbury that was killed during king Henry II's reign</label>
+<input name="q2" type="text" size="20"/>
+<br/><br/>
+<input type="submit">
+<input type="reset">
+</form>
+</body>
+</html>
