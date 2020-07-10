@@ -13,7 +13,7 @@ const app = express();
 app.use(bodyParser.json());
 
 app.use('/dishes/:dishId',dishRouter);// I changed app.use('/dishes',dishRouter); to include the id
-app.use('/dishes',dishRouter);
+//app.use('/dishes',dishRouter);
 
 app.use((req, res, next) => {
   res.statusCode = 200;
